@@ -1,0 +1,6 @@
+.helpOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 18, 0.72);
+  z-index: 50;
+}

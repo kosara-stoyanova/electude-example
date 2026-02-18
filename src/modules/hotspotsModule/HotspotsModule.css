@@ -1,0 +1,19 @@
+.hotspotsModule {
+  position: relative;
+  width: 100%;
+  max-width: var(--scene-width);
+}
+
+.hotspotsModule__img {
+  width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hotspotsModule__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

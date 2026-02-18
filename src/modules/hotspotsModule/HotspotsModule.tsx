@@ -1,5 +1,19 @@
+import "./HotspotsModule.css";
+
 import type { SvgHotspotDef } from "../../types/hotspot.types";
 import SvgHotspot from "../../components/hotspotSvg/HotspotSvg";
+
+type Props = {
+  imgSrc: string;
+  imgAlt: string;
+  sceneWidth: number;
+  sceneHeight: number;
+  hotspots: SvgHotspotDef[];
+  onSelect: (id: string) => void;
+  debug?: boolean;
+  highlightId?: string;
+  disabled?: boolean;
+};
 
 export default function HotspotsModule({
   imgSrc,
@@ -11,34 +25,26 @@ export default function HotspotsModule({
   debug = false,
   highlightId,
   disabled = false,
-}: {
-  imgSrc: string;
-  imgAlt: string;
-  sceneWidth: number;
-  sceneHeight: number;
-  hotspots: SvgHotspotDef[];
-  onSelect: (id: string) => void;
-  debug?: boolean;
-  highlightId?: string; // highlight correct one if you want
-  disabled?: boolean;
-}) {
+}: Props) {
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: sceneWidth }}>
+    <div
+      className="hotspotsModule"
+      style={
+        {
+          "--scene-width": `${sceneWidth}px`,
+        } as React.CSSProperties
+      }
+    >
       <img
         src={imgSrc}
         alt={imgAlt}
-        style={{ width: "100%", display: "block" }}
+        className="hotspotsModule__img"
         draggable={false}
       />
 
       <svg
+        className="hotspotsModule__svg"
         viewBox={`0 0 ${sceneWidth} ${sceneHeight}`}
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-        }}
       >
         {hotspots.map((h) => (
           <SvgHotspot

@@ -1,0 +1,8 @@
+.left-panel__container {
+  width: min(1100px, 96%);
+}
+
+.left-panel__container {
+  width: min(1100px, 96%);
+  margin: 0 auto;
+}

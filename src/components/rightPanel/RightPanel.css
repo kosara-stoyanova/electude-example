@@ -1,0 +1,13 @@
+/* Set the progress percent via CSS variable */
+.right-panel {
+  --pct: 0%;
+}
+
+.right-panel__progressFill {
+  width: var(--pct);
+}
+
+/* No-margin paragraph for the click-task instruction */
+.right-panel__instruction {
+  margin: 0;
+}

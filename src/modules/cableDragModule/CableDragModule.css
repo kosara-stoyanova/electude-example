@@ -1,0 +1,88 @@
+.cableDrag {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* matches VIEW_W */
+}
+
+.cableDrag__img {
+  width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cableDrag__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cableDrag__cableNeg {
+  stroke: rgba(7, 10, 15, 0.85);
+  stroke-width: 10;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.cableDrag__cablePos {
+  stroke: rgba(90, 40, 40, 0.85);
+  stroke-width: 10;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.cableDrag__handle {
+  cursor: grab;
+}
+
+.cableDrag__handle[data-disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Outer clamp ring base */
+.cableDrag__clampOuter {
+  r: 18;
+}
+
+/* Inner clamp dot base */
+.cableDrag__clampInner {
+  r: 10;
+}
+
+/* Outer ring highlight based on which clamp is required */
+.cableDrag__handle[data-terminal="negative"] .cableDrag__clampOuter {
+  fill: rgba(255, 255, 255, 0.45);
+}
+.cableDrag__handle[data-terminal="positive"] .cableDrag__clampOuter {
+  fill: rgba(255, 255, 255, 0.45);
+}
+
+.cableDrag[data-required="negative"]
+  .cableDrag__handle[data-terminal="negative"]
+  .cableDrag__clampOuter {
+  fill: rgba(255, 255, 255, 0.85);
+}
+
+.cableDrag[data-required="positive"]
+  .cableDrag__handle[data-terminal="positive"]
+  .cableDrag__clampOuter {
+  fill: rgba(255, 255, 255, 0.85);
+}
+
+/* Inner dot colors */
+.cableDrag__handle[data-terminal="negative"] .cableDrag__clampInner {
+  fill: rgba(23, 23, 24, 0.85);
+}
+
+.cableDrag__handle[data-terminal="positive"] .cableDrag__clampInner {
+  fill: rgba(255, 90, 70, 0.9);
+}
+
+/* Success ring */
+.cableDrag__successRing {
+  fill: rgba(75, 140, 92, 0.2);
+  stroke: rgba(75, 140, 92, 0.9);
+  stroke-width: 3;
+}

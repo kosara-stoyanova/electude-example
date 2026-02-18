@@ -55,58 +55,6 @@
   margin: 6px 0 6px;
 }
 
-.e-stepdot {
-  border: none;
-  outline: none;
-  padding: 0;
-  display: inline-grid;
-  place-items: center;
-}
-
-.e-stepdot:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
-
-.e-stepdot:not(:disabled) {
-  cursor: pointer;
-}
-
-.e-mcq {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.e-mcq__opt {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 10px 12px;
-  color: rgba(255, 255, 255, 0.9);
-  text-align: left;
-}
-
-.e-mcq__opt.is-checked {
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.e-mcq__box {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  display: grid;
-  place-items: center;
-  font-size: 12px;
-  flex: 0 0 auto;
-}
-
 .e-checkbtn {
   margin-top: 12px;
   padding: 10px 14px;
