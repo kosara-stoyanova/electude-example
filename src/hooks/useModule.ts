@@ -69,6 +69,13 @@ export const useModule = () => {
     setSelected([]);
   }, [chapterIndex, taskIndex]);
 
+  useEffect(() => {
+    if (task.type === "done") {
+      setStatus("success");
+      setMessage(null);
+    }
+  }, [task.type]);
+
   // ---------------------------
   // Small helpers
   // ---------------------------

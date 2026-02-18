@@ -112,6 +112,11 @@ export default function RightPanel({
             onSubmit={onSubmitMcq}
             disabled={status === "success"}
           />
+        ) : task.type === "done" ? (
+          <div className="done">
+            <div className="done__title">{task.title}</div>
+            <div className="done__body">{task.body}</div>
+          </div>
         ) : (
           <div className="e-p right-panel__instruction">{task.instruction}</div>
         )}

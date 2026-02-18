@@ -122,6 +122,12 @@ export const chapters: Chapter[] = [
         successMessage: "Well done. The positive terminal is disconnected.",
         errorMessage: "Not quite. Disconnect the positive terminal.",
       },
+      {
+        id: "done",
+        type: "done",
+        title: "You’re done!",
+        body: "You have completed this module. Use the step navigation to review, or press reset to start again.",
+      },
     ],
   },
 ];

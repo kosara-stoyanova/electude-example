@@ -24,7 +24,14 @@ export type McqTask = {
   errorMessage: string;
 };
 
-export type Task = ClickTask | McqTask;
+export type DoneTask = {
+  id: string;
+  type: "done";
+  title: string;
+  body: string;
+};
+
+export type Task = ClickTask | McqTask | DoneTask;
 
 export type Chapter = {
   id: string;

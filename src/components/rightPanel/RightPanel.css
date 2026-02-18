@@ -11,3 +11,18 @@
 .right-panel__instruction {
   margin: 0;
 }
+
+.done {
+  padding-top: 10px;
+}
+
+.done__title {
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.done__body {
+  opacity: 0.9;
+  line-height: 1.4;
+}
