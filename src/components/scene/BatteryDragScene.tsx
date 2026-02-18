@@ -104,8 +104,6 @@ export default function BatteryDragScene({
     lastDraggedRef.current = null;
   }
 
-  const negT = TERMINALS.negative;
-  const posT = TERMINALS.positive;
   const negA = ANCHORS.negative;
   const posA = ANCHORS.positive;
 

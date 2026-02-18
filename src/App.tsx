@@ -1,10 +1,8 @@
-import { hotspots } from "./data/moduleData";
 import { useModule } from "./hooks/useModule";
 import car from "./assets/car.jpg";
 import batteryImg from "./assets/car-battery.jpg";
 
 import LayoutShell from "./components/layoutShell/LayoutShell";
-import Hotspot from "./components/hotspot/Hotspot";
 
 import "./App.css";
 import SceneWithHotspots from "./components/scene/SceneWithHotspots";
