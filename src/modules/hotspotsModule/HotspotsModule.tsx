@@ -1,7 +1,7 @@
 import type { SvgHotspotDef } from "../../types/hotspot.types";
-import SvgHotspot from "../hotspotSvg/HotspotSvg";
+import SvgHotspot from "../../components/hotspotSvg/HotspotSvg";
 
-export default function SceneWithHotspots({
+export default function HotspotsModule({
   imgSrc,
   imgAlt,
   sceneWidth,

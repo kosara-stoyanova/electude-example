@@ -1,0 +1,24 @@
+.hotspot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 2px solid rgba(59, 130, 246, 0.9);
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.hotspot:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+.hotspot:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}

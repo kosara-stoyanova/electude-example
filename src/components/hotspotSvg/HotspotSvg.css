@@ -1,0 +1,40 @@
+.svg-hotspot {
+  cursor: pointer;
+  transition: fill 120ms ease, stroke 120ms ease;
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 0;
+}
+
+.svg-hotspot[data-disabled="true"] {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Debug mode */
+.svg-hotspot[data-debug="true"] {
+  fill: rgba(59, 130, 246, 0.12);
+  stroke: rgba(59, 130, 246, 0.7);
+  stroke-width: 2;
+}
+
+/* Correct */
+.svg-hotspot[data-state="correct"] {
+  fill: rgba(75, 140, 92, 0.25);
+  stroke: rgba(75, 140, 92, 0.9);
+  stroke-width: 2;
+}
+
+/* Wrong */
+.svg-hotspot[data-state="wrong"] {
+  fill: rgba(170, 70, 70, 0.22);
+  stroke: rgba(170, 70, 70, 0.9);
+  stroke-width: 2;
+}
+
+/* Optional hover effect (only when idle) */
+.svg-hotspot[data-state="idle"]:hover {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 2;
+}

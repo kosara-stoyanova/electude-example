@@ -1,15 +1,15 @@
 import { useModule } from "./hooks/useModule";
-import car from "./assets/car.jpg";
-import batteryImg from "./assets/car-battery.jpg";
+import car from "../public/car.jpg";
+import batteryImg from "../public/car-battery.jpg";
 
 import LayoutShell from "./components/layoutShell/LayoutShell";
 
 import "./App.css";
-import SceneWithHotspots from "./components/scene/SceneWithHotspots";
+import HotspotsModule from "./modules/hotspotsModule/HotspotsModule";
 import { SCENE, svgHotspots } from "./data/hotspotsSvg";
 import { useEffect, useMemo, useRef, useState } from "react";
 import HelpCallout from "./components/helpCallout/HelpCallout";
-import BatteryDragScene from "./components/scene/BatteryDragScene";
+import CableDragModule from "./modules/cableDragModule/CableDragModule";
 
 type TerminalId = "negative" | "positive";
 
@@ -90,7 +90,7 @@ export default function App() {
           chapter.id === "battery-removal" ? (
             <div style={{ width: "min(1100px, 96%)" }}>
               {chapter.id === "battery-removal" && task.type === "click" ? (
-                <BatteryDragScene
+                <CableDragModule
                   key={`battery-${batterySceneKey}`}
                   imgSrc={batteryImg}
                   required={task.correctHotspotId as "negative" | "positive"}
@@ -115,7 +115,7 @@ export default function App() {
             </div>
           ) : (
             <div style={{ width: "min(1100px, 96%)" }}>
-              <SceneWithHotspots
+              <HotspotsModule
                 imgSrc={car}
                 imgAlt="Engine bay"
                 sceneWidth={SCENE.w}
@@ -270,7 +270,7 @@ export default function App() {
                 onClick={() => {
                   reset(); // your module reset
                   setDisconnected({ negative: false, positive: false }); // reset chapter cable state
-                  setBatterySceneKey((k) => k + 1); // ✅ remount BatteryDragScene -> clamps reset
+                  setBatterySceneKey((k) => k + 1); // ✅ remount CableDragModule -> clamps reset
                 }}
                 aria-label="Reset"
               >

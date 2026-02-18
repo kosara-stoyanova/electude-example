@@ -26,7 +26,7 @@ const ANCHORS: Record<TerminalId, { x: number; y: number }> = {
 
 const DISCONNECT_DIST = 90;
 
-export default function BatteryDragScene({
+export default function CableDragModule({
   imgSrc,
   required,
   disconnected,
