@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "target": "ES2022",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -20,7 +21,8 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "jsx": "react-jsx"
   },
   "include": ["src"]
 }

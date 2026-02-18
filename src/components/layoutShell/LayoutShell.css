@@ -1,0 +1,160 @@
+.e-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.e-topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid var(--border);
+}
+
+.e-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.e-title {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.e-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.e-brand {
+  font-weight: 700;
+  opacity: 0.9;
+  letter-spacing: 0.2px;
+}
+
+.e-iconbtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  cursor: pointer;
+}
+.e-iconbtn:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.e-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.e-scene {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 0 0 0;
+}
+
+.e-panel {
+  min-width: 0;
+  padding: 14px 16px;
+  border-left: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.e-progress {
+  margin: 8px 0 14px 0;
+}
+.e-progress__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--barTrack);
+  overflow: hidden;
+}
+.e-progress__fill {
+  height: 100%;
+  background: var(--bar);
+  width: 30%;
+}
+
+.e-steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 18px;
+}
+.e-stepdot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--dot);
+}
+.e-stepdot--active {
+  width: 18px;
+  height: 18px;
+  background: var(--active);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #111;
+}
+
+.e-h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.e-p {
+  margin: 0 0 14px;
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.e-card {
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.e-card__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.e-badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--active);
+  color: #111;
+  font-size: 11px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.e-footer {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.08);
+}
